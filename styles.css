@@ -1,0 +1,101 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #59C1B6;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+a {
+  display: block;
+  color: black;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  color: #59C1B6;
+}
+
+.grid {
+  display: grid;
+  height: 450px;
+  width: 450px;
+  padding: 0.2rem;
+  background-color: #7A8285;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "i1 i1 i2" "i4 i5 i2" "i4 i3 i3";
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.24), 0 5px 14px 0 #e2def8;
+}
+
+.mat {
+  margin: 0.25rem;
+  overflow: hidden;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+.mat-1 {
+  grid-area: i1;
+  color: #09A89E;
+}
+
+.mat-2 {
+  grid-area: i2;
+  color: #63687D;
+}
+
+.mat-3 {
+  grid-area: i3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #63687D;
+}
+
+.mat-4 {
+  grid-area: i4;
+}
+
+.mat-5 {
+  grid-area: i5;
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .grid {
+    width: 320px;
+    height: 320px;
+    margin: 1em;
+  }
+
+  .mat {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
